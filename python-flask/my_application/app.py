@@ -14,3 +14,7 @@ def upload_file():
     return '',201
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
+
+@app.route("/heya")
+def hey()
+     return "Hello Guy! Welcome to my page"
