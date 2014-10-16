@@ -15,10 +15,12 @@ def upload_file():
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
 
-@app.route("/heya")
+@app.route("/heya/")
 def hey():
      return "Hello Guy! Welcome to my page"
 
-@app.route("/square/<number>")
+@app.route("/square/<int:number>")
 def squarenum(number):
      return number*number
+
+
