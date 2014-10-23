@@ -12,6 +12,8 @@ def upload_file():
         f = request.files['file']
         f.save('./uploads/'+f.filename)
     return '',201
+    if request.method == 'GET':
+	return "Get Command"
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
 
