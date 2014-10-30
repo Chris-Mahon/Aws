@@ -31,8 +31,9 @@ def squarenum(number):
 def list_files():
      path = "./uploads/"
      dirs = os.listdir(path)
+     files = ""
      for file in dirs:
-	print file
+	files = str(files + file + ", ")
 
 @app.route("/euler1")
 def euler1():
@@ -40,7 +41,7 @@ def euler1():
      for i in range (1, 1000):
 	if i%3 or i%5:
 	   sum = sum + i
-     print sum
+     return str(sum)
 
 @app.route("/euler2")
 def euler2():
