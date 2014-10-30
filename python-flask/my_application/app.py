@@ -34,6 +34,7 @@ def list_files():
      files = ""
      for file in dirs:
 	files = str(files + file + ", ")
+     return files
 
 @app.route("/euler1")
 def euler1():
