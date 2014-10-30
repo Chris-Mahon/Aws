@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import request
+import os, sys
 app = Flask(__name__)
 
 @app.route("/")
@@ -13,7 +14,7 @@ def upload_file():
         f.save('./uploads/'+f.filename)
     return '',201
     if request.method == 'GET':
-	return "Get Command"
+	return "Get Command\n"
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
 
@@ -25,4 +26,10 @@ def hey():
 def squarenum(number):
      return number*number
 
-
+#Code found through google
+@app.route("/files")
+def list_files():
+     path = "./uploads/"
+     dirs = os.listdir(path)
+     for file in dirs:
+	print file
