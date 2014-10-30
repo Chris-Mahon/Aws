@@ -54,4 +54,5 @@ def euler2():
 	sum = term1 + term2
 	term1 = term2
 	term2 = sum
-     return("Fibinacci up to 4000000 is ",sum)
+	answer = "Fibinacci up to 4000000 is " + str(sum)
+     return answer
